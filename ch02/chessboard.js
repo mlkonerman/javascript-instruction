@@ -1,0 +1,10 @@
+let stringOne = " # # # # #";
+let stringTwo = "# # # # # ";
+console.log(stringOne);
+console.log(stringTwo);
+console.log(stringOne);
+console.log(stringTwo);
+console.log(stringOne);
+console.log(stringTwo);
+console.log(stringOne);
+console.log(stringTwo);
