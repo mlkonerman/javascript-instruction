@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bowling</title>
+</head>
+
+<body>
+    <h1>Let's Bowl!</h1>
+    <button onclick="bowl();">Click to Bowl!</button>
+    <p id="scores"></p>
+    <p id="totalScore"></p>
+    <p id="message"></p>
+    <script>
+        // function printScores(){
+        //     let scores = [9, 10, 4, 2, 10, 7, 10, 10, 5, 6];
+        //     document.write(scores);
+        // }
+        function bowl() {
+
+            let scores = Array(10).fill().map(() => Math.floor(Math.random() * 11))
+            document.getElementById("scores").innerHTML = scores;
+            let totalScore = sum(scores);
+            document.getElementById("totalScore").innerHTML = "Your total score is " + totalScore;
+            let message = "";
+            if (totalScore >= 60) {
+
+                document.getElementById("message").innerHTML = "Very impressive!";
+            }
+            else if (totalScore < 60 && totalScore >= 50) {
+                document.getElementById("message").innerHTML = "Not bad, not bad...";
+            } else {document.getElementById("message").innerHTML = "You suck!";}
+
+
+            function sum(array) {
+                let total = 0;
+                for (let value of array) {
+                    total += value;
+                }
+                return total;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

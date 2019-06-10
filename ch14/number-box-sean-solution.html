@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="minus" onclick="changeNumber(-1)">-</button>
+    <input id="theNbr" type ="text" value="0" size = "5">
+    <button id="plus" onclick="changeNumber(1)">+</button>
+    <script>
+        let number = 0;
+        //define changeNumber function
+        function changeNumber(changeValue) {
+            number = number + Number(changeValue);
+            console.log("Number = " + number);
+            let numberCtrl = document.getElementById("theNbr")
+            numberCtrl.value = number;
+            //set color style based on even/odd
+            let evenOdd = number % 2;
+            numberCtrl.style.color = "black";
+            numberCtrl.style.fontStyle = "normal";
+            numberCtrl.style.fontSize = "2em";
+            if (evenOdd==0) {
+                //even
+                numberCtrl.style.color="red";
+            }
+            if (number % 3 == 0) {
+                numberCtrl.style.fontStyle = "italic";
+            }
+            if (number % 7 == 0) {
+                numberCtrl.style.fontSize = "2.5em";
+            }
+
+
+        }
+    
+    </script>
+</body>
+</html>

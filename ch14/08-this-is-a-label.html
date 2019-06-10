@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is a label</title>
+    <script language="JavaScript">
+        function showInput() {
+            document.getElementById('display').innerHTML =
+                document.getElementById("user_input").value;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <section>
+
+        <form>
+
+            <table>
+                <tr>
+                    <td>This is a label:</td>
+                    <td> <input type="text" name="label"> </td>
+                    <td><button type="submit">Click Me!</button></td>
+                </tr>
+
+
+        </form>
+
+    </section> -->
+    <form>
+        <label>This is a label</label>
+        <input type="text" name="message" id="user_input">
+    </form>
+    <button onclick="showInput();">Click Me!</button><br />
+    <p><span id='display'></span></p>
+
+
+</body>
+
+</html>

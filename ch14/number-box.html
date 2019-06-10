@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Box</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type = "submit" value = "-" onclick ="decrement()">
+    <input value = "0" type = "text" id ="numberBox">
+    <input type = "submit" value = "+" onclick ="increment()">
+    <script>
+        function increment() {
+            let number = document.getElementById("numberBox").value++;
+            if (number % 2 == 0) {
+                document.getElementById("numberBox").style.color="red";
+            }
+            else {document.getElementById("numberBox").style.color="black";}
+        }
+        function decrement() {
+            let number = document.getElementById("numberBox").value--;
+        }
+    </script>
+</body>
+</html>

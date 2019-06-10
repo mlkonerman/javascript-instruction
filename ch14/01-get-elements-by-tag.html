@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get A Tags</title>
+</head>
+<body>
+    <h1>Some links</h1>
+    <a href="https://www.cnn.com/">CNN Website</a>
+    <a href="https://www.ccpf.org/">CCPF Website</a>
+    <a href="https://www.google.com/">Google</a>
+    <script>
+        let link = document.body.getElementsByTagName("a")[0];
+        console.log(link.href);
+        let links = document.body.getElementsByTagName("a");
+        for (let l of links) {
+            console.log(l.href);
+        }
+        //need regular for loop when it's important to know which iteration you're on
+        console.log("old school for loop");
+        for (let i = 0; i<links.length; i++) {
+            console.log(links[i].href);
+
+        }
+        
+    </script>
+</body>
+</html>
